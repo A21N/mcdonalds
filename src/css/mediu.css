@@ -1,0 +1,190 @@
+
+.general-mediu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-banner-text {
+    background-color: #fdba1f;
+    width: 100%;
+
+}
+
+.text-mediu {
+    margin: 0 auto;
+    width: 1180px;
+    height: 200px;
+    margin-top: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-mediu-1 {
+    width: 50%;
+    text-align: left;
+    font-size: 4.0em;
+    line-height: 65px;
+    padding-left: 20px;
+}
+
+.text-mediu-2 {
+    width: 50%;
+    text-align: left;
+    padding-left: 120px;
+    padding-right: 60px;
+    font-size: 1.8em;
+}
+
+.container-mediu {
+    width: 1180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0 auto;
+
+    }
+
+.paragraf-slim {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.first-mediu {
+    display: flex;
+    width: 100%;
+    
+    padding: 0 30px;
+}
+
+.first-fifty {
+    width: 50%;
+}
+
+
+.second-part-background-mediu {
+    background-color: #a5cf4e;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.align-mediu-text-top {
+    width: 900px;
+    
+}
+
+.align-mediu-text-bottom {
+    width: 900px;
+    
+  
+}
+
+.second-part {
+    width: 1180px;
+    margin: -40px auto 0 auto;
+}
+
+.third-part-background-mediu {
+    background-color: #a5cf4e;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+   
+
+}
+
+
+.dis-mediu {
+    padding: 90px 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1220px) {
+    .text-mediu {
+        width: 100%;
+        height: 200px;
+    }
+
+
+    .text-mediu-1 {
+        margin: -10px auto auto auto;
+    }
+    
+    .text-mediu-2 {
+        margin: -50px auto auto auto;
+    }
+
+
+    .first-mediu {
+        width: 100%;
+    }
+
+
+    .second-part {
+        width: 100%;
+    }
+
+
+    .container-mediu {
+        width: 100%;
+    
+        }
+
+
+        .align-mediu-text-top {
+            width: 60%
+        }
+        
+        .align-mediu-text-bottom {
+            width: 60%;
+        }
+
+    
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .text-mediu {
+        flex-direction: column;
+      padding: 0px 0 60px 0;
+        height: auto;
+    }
+
+
+    .text-mediu-1 {
+        text-align: center;
+        margin: -60px auto 0 auto;
+        width: 90%;
+        
+    }
+    
+    .text-mediu-2 {
+        text-align: center;
+        margin: 0 auto 0 -20px;
+        width: 100%;
+    }
+
+    .first-mediu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .first-fifty {
+        width: 100%;
+    }
+
+    
+}

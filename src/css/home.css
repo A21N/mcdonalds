@@ -1,0 +1,215 @@
+
+
+
+.galery-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 10px;
+  
+}
+
+.gal-1, .gal-2, .gal-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+
+}
+
+.back-bome-elements-1 {
+    background-image: url('../images/mc1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+
+}
+
+.back-bome-elements-2 {
+    background-image: url('../images/mc2.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  
+}
+
+.back-bome-elements-3 {
+    background-image: url('../images/mc3.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.back-bome-elements-4 {
+    background-image: url('../images/mc4.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.back-bome-elements-5 {
+    background-image: url('../images/mc5.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.back-bome-elements-6 {
+    background-image: url('../images/mc6.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.size-home-img {
+    width: 100%;
+    
+  
+}
+
+
+.galery-home-small {
+    display: none;
+}
+
+
+.pos-elements {
+    margin: -10px 0;
+   
+}
+
+.home-buttons {
+    margin-top: 20px;
+    padding: 8px 10px;
+    font-size: 1.0em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #fab721;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.home-color {
+    color: white;
+}
+
+.text-elements-small {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.home-color-small {
+    color: black;
+    margin: 5px 0;
+    
+}
+
+
+@media screen and (max-width:1500px) {
+
+    .back-bome-elements-1,
+    .back-bome-elements-2,
+    .back-bome-elements-3,
+    .back-bome-elements-4,
+    .back-bome-elements-5,
+    .back-bome-elements-6 {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:991px) {
+
+    .gal-1, .gal-2, .gal-3 {
+        margin: -5px 0;
+        flex-direction: column;
+    }
+
+    .back-bome-elements-1,
+    .back-bome-elements-2,
+    .back-bome-elements-3,
+    .back-bome-elements-4,
+    .back-bome-elements-5,
+    .back-bome-elements-6 {
+        height: 30rem;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    .galery-home {
+        display: none;
+    }
+
+    .galery-home-small {
+        margin: 10px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gal-1-small, .gal-2-small, .gal-3-small {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+    .size-home-img-small {
+        width: 100%;
+    }
+  
+    
+}

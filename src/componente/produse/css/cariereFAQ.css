@@ -1,0 +1,154 @@
+/*FAQ section*/
+
+.general-faq {
+    width: 100%;
+    background-color: #fab721;
+}
+
+.faq-container {
+    width: 1180px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 30px 60px 30px;
+    margin: 0 auto;
+}
+
+.faq-us {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.align-faq {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.align-title-faq {
+    text-align: center;
+}
+
+
+
+.text-desc-faq {
+    font-family: sans-serif;
+}
+
+.text-desc-faq-none {
+    display: none;
+
+}
+
+.faq-button {
+    position: relative;
+    right: 0;
+    
+}
+
+.cube-faq {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 12px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.arrow-faq {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    left: -10px;
+    top: -5px; 
+}
+
+.arrow-faq-return {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    left: -10px;
+    top: -5px; 
+    rotate: 180deg;
+}
+
+.arr-faq-left {
+    width: 2px;
+    height: 13px;
+    background-color: #fab721;
+    transform: rotate(-45deg) translate(-4px, 0px);
+}
+
+.arr-faq-right {
+    width: 2px;
+    height: 13px;
+    background-color: #fab721;
+    transform: rotate(45deg) translate(4px, 0px);
+}
+
+.align-faq h3 {
+    font-size: 1.05em;
+}
+
+@media screen and (max-width: 1250px) {
+    .faq-container {
+        width: 95%;
+        
+    }
+    
+}
+
+
+@media screen and (max-width: 590px) {
+    .cube-faq {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        border: 1px solid black;
+        display: inline-block;
+    }
+    
+    .arrow-faq {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        left: 5px;
+        top: -35px;
+    
+       
+    }
+
+    .arrow-faq-return {
+        position: relative;
+        width: 28px;
+        height: 28px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        left: 5px;
+        top: -35px;
+        rotate: 180deg;
+       
+    }
+    
+}
+
+

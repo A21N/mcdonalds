@@ -1,0 +1,201 @@
+
+#happyminion-large {
+    display: block;
+    margin-top: 115px;
+    width: 100%;
+}
+
+#happyminion-small {
+    display: none;
+}
+
+#ronald-large {
+    display: block;
+    margin-top: 115px;
+    width: 100%;
+}
+
+
+.heading-minions {
+    text-align: center;
+    width: 1180px;
+    margin: 30px auto 3px auto;
+    
+}
+
+.size-p-minions {
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buton-minions {
+    display: flex;
+    margin: 20px auto;
+    background-color: #ffbc0d;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1.0em;
+}
+
+.size-min {
+    margin-bottom: 60px;
+}
+
+
+table {
+    width: 1180px;
+    border-collapse: collapse;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .heading-minions {
+        width: 90%;
+    }
+
+}
+
+
+@media screen and (max-width: 1250px) {
+
+   
+
+    table {
+        width: 750px;
+        border-collapse: collapse;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1025px) {
+
+    #happyminion-large {
+        display: block;
+        margin-top: 0px;
+        width: 100%;
+    }
+    #ronald-large {
+        display: block;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    table {
+        width: 600px;
+    }
+   
+    
+}
+
+
+
+@media screen and (max-width: 991px) {
+
+    #happyminion-small {
+        display: block;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    #happyminion-large {
+        display: none;
+    }
+
+  
+    
+}
+
+/*Ronald calendar*/
+
+
+
+
+.ronald-calendat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#program-align-especialy {
+    text-align: left;
+}
+
+td {
+    vertical-align: top;
+    width: auto;
+    border-top: 1px solid #b3b3b3;
+    border-bottom: 1px solid #b3b3b3;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+th {
+    font-weight: bold;
+    border-top: 1px solid #b3b3b3;
+    border-bottom: 1px solid #b3b3b3;
+    padding: 15px;
+    text-align: center;
+}
+
+.bold-table td {
+    font-weight: bold;
+}
+
+.ronald-mobile {
+   display: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .ronald-desktop {
+        display: none;
+    }
+
+    table {
+        width: 900px;
+    }
+    
+    .ronald-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+
+    .alignrnd {
+        text-align: left;
+        border-top: 1px solid #b3b3b3;
+        padding: 10px 0;
+    }
+
+    .rndright {
+        margin-right: -30px;
+    }
+
+    .rndbtn {
+        text-align: left;
+        border-top: none;
+        padding: 10px 0;
+        margin-top: -12px;
+    }
+
+    .par-rnd {
+        width: 60px;
+        text-align: left;
+        line-height: 25px;
+
+    }
+
+
+    
+}

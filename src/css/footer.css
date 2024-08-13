@@ -1,0 +1,287 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#footer-top-line {
+width: 1180px;
+border: 0.1em solid black;
+opacity: 0.2;
+}
+
+footer {
+    display: flex;
+    width: 1180px;
+    
+}
+
+.footer-left {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer-left p:hover {
+    text-decoration: underline;
+    
+}
+
+
+.footer-despre {
+    margin-right: 30px;
+}
+
+.footer-despre h3 {
+    font-size: 16px;
+}
+
+.footer-despre p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-restaurante {
+    margin-right: 30px;
+    margin-left: 30px;
+} 
+
+.footer-restaurante h3 {
+    font-size: 16px;
+}
+
+.footer-restaurante p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-contact {
+    margin-left: 30px;
+}
+
+.footer-contact  h3 {
+    font-size: 16px;
+}
+
+.footer-contact  p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+}
+
+.footer-utile h3 {
+    font-size: 16px;
+}
+
+.footer-text-right {
+    text-align: right;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-copy-elements {
+    display: flex;
+    width: 1180px;
+    padding: 0 25px;
+}
+
+.app-elements {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.app-elements p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-section {
+    display: flex;
+}
+
+.app-section img {
+    padding: 0 10px 0 0;
+}
+
+
+.copy-elements {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.copy-elements h3 {
+    font-size: 16px;
+}
+
+
+.social-media {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    border-radius: 50px;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.social-media img:hover {
+    opacity: 0.5;
+}
+
+.social-media [alt='Facebook'] {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    border-radius: 50px;
+    background-color: black;
+    border: 6px solid rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 1200px) {
+    #footer-top-line {
+        width: 95%;
+        
+        }
+        footer {
+           
+            width: 95%;
+            
+        }
+
+        .app-copy-elements {
+            width: 100%;
+        }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .app-copy-elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .app-elements {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .copy-elements {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #footer-top-line {
+        width: 95%;
+  
+        }
+        footer {
+           
+            width: 95%;
+            
+        }
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+
+    #footer-top-line {
+        width: 95%;
+        }
+  
+    footer {
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-left {
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .footer-despre {
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .footer-restaurante {
+        text-align: center;
+        margin-right: 30px;
+        margin-left: 10px;
+    }
+
+    .footer-contact {
+        text-align: center;
+        margin-left: 10px;
+    }
+
+
+    .footer-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .footer-text-right {
+        text-align: center;
+    }
+
+
+    .footer-text-right:hover {
+        text-decoration: underline;
+    }
+
+
+    .social-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    
+    }
+
+    .app-section img {
+        padding: 10px;
+    }
+
+}
+
+
+
+
+    

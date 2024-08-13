@@ -1,0 +1,531 @@
+@font-face {
+    font-family: 'Speedee Bold';
+    src: url('./Speedee-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+
+
+body {
+    font-family: 'Speedee Bold', sans-serif;
+    margin:0;
+    
+}
+
+#desktop-menu {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Meniu red line - start*/
+.for-red-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-meniu-line {
+    display: none;
+}
+
+.red-meniu-line-unhide {
+    display: block;
+    background-color: rgb(210, 4, 4);
+    width: 90px;
+    height: 4px;
+    z-index: 5;
+    position: absolute;
+    top: 107px;
+}
+
+.red-familie-line {
+   display: none;
+}
+
+.red-familie-line-unhide {
+    display: block;
+    background-color: rgb(210, 4, 4);
+    width: 90px;
+    height: 4px;
+    z-index: 5;
+    position: absolute;
+    top: 107px;
+}
+
+.red-comunitate-line {
+    display: none;
+}
+
+.red-comunitate-line-unhide {
+    display: block;
+    background-color: rgb(210, 4, 4);
+    width: 120px;
+    height: 4px;
+    z-index: 5;
+    position: absolute;
+    top: 107px;
+}
+/*Meniu red line - end*/
+
+.menu-items {
+    margin-top: 48px;
+    display: flex;
+    margin-bottom: -4px;
+}
+
+#logo {
+   margin-right: 60px;
+   position: relative;
+   top: 13px;
+   right: 116px;
+}
+
+#logo img {
+    width: 80px;
+}
+
+/*arrow meniu*/
+.item-meniu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.item-meniu:hover, 
+.item-familie:hover, 
+.item-comunitate:hover {
+    color: gray;
+}
+
+
+.arrow-menu-meniu {
+    display: flex;
+    transition-duration: 0.3s;
+    margin-left: 5px;
+}
+
+.arrow-left-meniu {
+    background-color: black;
+    width: 6px;
+    height: 1.5px;
+    margin-right: -2.5px;
+    rotate: 45deg;
+}
+
+.arrow-right-meniu {
+    background-color: black;
+    width: 6px;
+    height: 1.5px;
+    rotate: -45deg;
+}
+
+.arrow-menu-meniu-toggle {
+    rotate: -180deg;
+    transition-duration: 0.3s;
+}
+
+/*arrow familie*/
+.item-familie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.arrow-menu-familie {
+    display: flex;
+    transition-duration: 0.3s;
+    margin-left: 5px;
+}
+
+.arrow-left-familie {
+    background-color: black;
+    width: 6px;
+    height: 1.5px;
+    margin-right: -2.5px;
+    rotate: 45deg;
+}
+
+.arrow-right-familie {
+    background-color: black;
+    width: 7px;
+    height: 1.5px;
+    rotate: -45deg;
+}
+
+.arrow-menu-familie-toggle {
+    rotate: -180deg;
+    transition-duration: 0.3s;
+}
+
+/*arrow comunitate*/
+.item-comunitate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.arrow-menu-comunitate {
+    display: flex;
+    transition-duration: 0.3s;
+    margin-left: 5px;
+}
+
+.arrow-left-comunitate {
+    background-color: black;
+    width: 6px;
+    height: 1.5px;
+    margin-right: -2.5px;
+    rotate: 45deg;
+}
+
+.arrow-right-comunitate {
+    background-color: black;
+    width: 7px;
+    height: 1.5px;
+    rotate: -45deg;
+}
+
+.arrow-menu-comunitate-toggle {
+    rotate: -180deg;
+    transition-duration: 0.3s;
+}
+
+/*alte elemente din meniu*/
+
+.item-restaurante, .item-team, .item-mccafe {
+    margin: 10px 20px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.item-meniu, .item-familie, .item-comunitate, .item-restaurante, .item-team, .item-mccafe {
+    user-select: none;
+    cursor: pointer;
+}
+
+/*Elementele din meniul Meniu*/
+.meniu-items-desktop-hide {
+    display: none;
+}
+
+.meniu-items-desktop {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 30px 0;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    left: 0px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.meniu-col-meniu-1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: -330px;
+}
+
+.menu-links {
+    text-decoration: none;
+    color:black
+}
+
+.menu-links:hover {
+    color: gray;
+}
+
+.meniu-col-1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: -675px;
+}
+
+.meniu-col-2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+}
+
+.line-meniu {
+    border-top: 1px solid black;
+    padding: 13px 0;
+    width: 30vw;
+    font-family: 'Arial';
+    font-size: 14.5px;
+}
+
+/*Elementele din meniul Meniu*/
+.familie-items-desktop-hide {
+  display: none;
+}
+
+.familie-items-desktop {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    position: absolute;
+    z-index: 4;
+    top: 110px;
+    left: 0px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/*Elementele din meniul Meniu*/
+
+.comunitate-items-desktop-hide {
+   display: none;
+}
+
+.comunitate-items-desktop {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    position: absolute;
+    z-index: 3;
+    top: 110px;
+    left: 0px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 1200px) {
+    #logo {
+        right: 10px;
+     }
+}
+
+@media only screen and (max-width: 1025px) {
+    #desktop-menu {
+        flex-direction: column;
+        position: static;
+    }
+
+    #slide-show {
+        margin-top: 0px;
+    }
+ 
+
+    .menu-items {
+        display: none;
+    }
+
+    #logo {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+     }
+
+     #logo img {
+        width: 60px;
+        margin: 10px 0 10px 15px;
+     }
+
+     /*Meniul de tip burger*/
+     .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin: 10px 10px 10px 0;
+     }
+
+     .burger-line-1 {
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        transition-duration: 0.2s;
+        border-radius: 50px;
+     }
+
+     .burger-line-2 {
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        margin: 6px 0;
+        border-radius: 50px
+     }
+
+     .burger-line-3 {
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        transition-duration: 0.2s;
+        border-radius: 50px;
+     }
+
+     /*toggle burger menu*/
+     .burger-line-1-toggle {
+        transform: rotate(45deg) translate(4px, 2px);
+        transition-duration: 0.2s;
+     }
+
+     .burger-line-2-toggle {
+        display: none;
+     }
+
+     .burger-line-3-toggle {
+        transform: rotate(-45deg) translate(1px, 1px);
+        transition-duration: 0.2s;
+     }
+
+    .menu-items-hide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 30px;
+        padding-top: 32px;
+        padding-left: 10px;
+        padding-bottom: 40px;
+        z-index: 4;
+        background-color: white;
+        width: 100%;
+        border-top: 2px solid rgba(114, 114, 114, 0.038);
+    }
+
+    .text-menu {
+        font-size: 14px;
+    }
+
+    .meniu-items-desktop-hide, .familie-items-desktop-hide, .comunitate-items-desktop-hide {
+        position: static;
+        border: none;
+    }
+
+    .meniu-col-meniu-1 {
+        margin-left: 36px;
+        margin-right: 1%;
+       
+       
+    }
+
+    .meniu-col-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1%;
+    }
+
+    .meniu-items-desktop {
+        border: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 10px;
+        padding: 0px 0 30px 0;
+    }
+
+    .meniu-col-1 {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 37px;
+        margin-top: -15px;
+    }
+
+    .familie-items-desktop {
+        position: static;
+        display: flex;
+    }
+
+    .line-meniu {
+        border: none;
+        margin: -5px 0;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 0.95em;
+    }
+
+    #resize-text-menu {
+        width: 150px;
+    }
+
+    .for-red-line {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: -12px 0;
+    }
+
+    .red-meniu-line-unhide {
+        display: block;
+        background-color: rgb(210, 4, 4);
+        width: 85vw;
+        height: 4px;
+        z-index: 5;
+        position: absolute;
+        top: 300px;
+        left: 30px;
+    }
+
+    .red-familie-line-unhide {
+        display: block;
+        background-color: rgb(210, 4, 4);
+        width: 85vw;
+        height: 4px;
+        z-index: 5;
+        position: absolute;
+        top: 217px;
+        left: 30px;
+    }
+
+    .red-comunitate-line-unhide {
+        display: block;
+        background-color: rgb(210, 4, 4);
+        width: 85vw;
+        height: 4px;
+        z-index: 5;
+        position: absolute;
+        top: 260px;
+        left: 30px;
+    }
+
+    .item-restaurante, .item-team, .item-mccafe {
+        margin: 0px 0 -5px 20px;
+    }
+}
+
+
+@media screen and (max-width: 610px) {
+    #resize-text-menu {
+        width: 130px;
+        line-height: 23px;
+    }    
+}
+
+
+#active {
+    color: gray; /* Culoarea gri pentru textul activ */
+}
+
+
