@@ -1,5 +1,5 @@
 import '../css/footer.css';
-
+import { Link } from 'react-router-dom';
 
 import gplay from '../images/gplay.svg';
 import apple from '../images/apple.svg';
@@ -33,8 +33,8 @@ export const Footer = () => {
                     <div className='footer-contact'>
                         <h3>Contact</h3>
                         <p>Contact</p>
-                        <p>Carieră</p>
-                        <p>Presa</p>
+                        <p><Link to='/cariere' className='footer-links-none'>Carieră</Link></p>
+                        <p><Link to='/presa' className='footer-links-none'>Presa</Link></p>
                     </div>
                 </div>
                 <div className="footer-right">
@@ -45,10 +45,10 @@ export const Footer = () => {
                         <p className='footer-text-right'>CCTV</p>
                         <p className='footer-text-right'>Declarație cookie</p>
                         <p className='footer-text-right'>Regulamente</p>
-                        <p className='footer-text-right'>Autoritatea Națională pentru Protecția Consumatorilor</p>
+                        <p className='footer-text-right'><a href='https://anpc.ro/' className='footer-links-none'>Autoritatea Națională pentru Protecția Consumatorilor</a></p>
                         <p className='footer-text-right'>Prevenire și reducere deșeuri</p>
                         <p className='footer-text-right'>Gramaje, Alergeni, Ingrediente</p>
-                        <p className='footer-text-right'>Autorizații și Avize</p>
+                        <p className='footer-text-right'><a href='https://mcdonalds.ro/sites/default/files/2024-08/centralizare%20autorizatii%20ANPC%202024%20v31%20072024.pdf' className='footer-links-none'>Autorizații și Avize</a></p>
                         <p className='footer-text-right'>Telefonul Consumatorilor: 021-9551</p>
                     </div>
                     <div className='social-media'>

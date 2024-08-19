@@ -49,6 +49,12 @@
   
 }
 
+
+.home-decoration-none {
+    text-decoration: none;
+    color: black;
+}
+
 .back-bome-elements-3 {
     background-image: url('../images/mc3.jpg');
     background-size: 100% 100%;
@@ -132,6 +138,7 @@
     background-color: #fab721;
     text-transform: uppercase;
     cursor: pointer;
+    color: black;
 }
 
 .home-color {

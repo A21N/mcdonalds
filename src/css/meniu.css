@@ -15,17 +15,35 @@ body {
 
 #desktop-menu {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: baseline;
     position: fixed;
     top: 0;
-    left: 0;
+    margin: 0 auto;
+    
     width: 100%;
     background-color: white;
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+.menu-items-hide {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+
+    
+    padding-top: 32px;
+   
+    padding-bottom: 0px;
+    z-index: 4;
+    background-color: white;
+    
+    border-top: 2px solid rgba(114, 114, 114, 0.038);
+}
 /*Meniu red line - start*/
 .for-red-line {
     display: flex;
@@ -78,30 +96,42 @@ body {
 /*Meniu red line - end*/
 
 .menu-items {
-    margin-top: 48px;
+    margin-top: 32px;
     display: flex;
+    flex-direction: row;
     margin-bottom: -4px;
+  
 }
 
 #logo {
-   margin-right: 60px;
-   position: relative;
-   top: 13px;
-   right: 116px;
+ 
+    align-self: flex-start;
+    margin-right: 5%;
+
 }
 
 #logo img {
     width: 80px;
+    margin-top: 20px;
+    
 }
+
+
+
+
+
 
 /*arrow meniu*/
 .item-meniu {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 20px;
+    margin: 10px 0px;
     font-weight: 700;
     font-size: 16px;
+ 
+  
+    
 }
 
 .item-meniu:hover, 
@@ -243,7 +273,7 @@ body {
 .meniu-col-meniu-1 {
     display: flex;
     flex-direction: column;
-    margin-left: -330px;
+    margin-left: -70px;
 }
 
 .menu-links {
@@ -386,6 +416,12 @@ body {
      .burger-line-1-toggle {
         transform: rotate(45deg) translate(4px, 2px);
         transition-duration: 0.2s;
+
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        transition-duration: 0.2s;
+        border-radius: 50px;
      }
 
      .burger-line-2-toggle {
@@ -395,6 +431,11 @@ body {
      .burger-line-3-toggle {
         transform: rotate(-45deg) translate(1px, 1px);
         transition-duration: 0.2s;
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        transition-duration: 0.2s;
+        border-radius: 50px;
      }
 
     .menu-items-hide {
@@ -402,7 +443,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         position: absolute;
-        top: 30px;
+        top: 85px;
         padding-top: 32px;
         padding-left: 10px;
         padding-bottom: 40px;
@@ -412,9 +453,7 @@ body {
         border-top: 2px solid rgba(114, 114, 114, 0.038);
     }
 
-    .text-menu {
-        font-size: 14px;
-    }
+  
 
     .meniu-items-desktop-hide, .familie-items-desktop-hide, .comunitate-items-desktop-hide {
         position: static;
@@ -474,7 +513,7 @@ body {
         flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: flex-start;
-        margin: -12px 0;
+        margin: -15px 0;
     }
 
     .red-meniu-line-unhide {
@@ -484,7 +523,7 @@ body {
         height: 4px;
         z-index: 5;
         position: absolute;
-        top: 300px;
+        top: 315px;
         left: 30px;
     }
 
@@ -512,7 +551,36 @@ body {
 
     .item-restaurante, .item-team, .item-mccafe {
         margin: 0px 0 -5px 20px;
+        width: 85vw;
     }
+
+    .item-meniu {
+        width: 85vw;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .item-familie {
+        width: 85vw;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .item-comunitate {
+        width: 85vw;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+    .text-menu {
+        
+        font-size: 14px;
+    }
+   
 }
 
 

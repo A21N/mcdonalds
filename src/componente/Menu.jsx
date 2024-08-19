@@ -1,7 +1,16 @@
 import '../css/meniu.css';
 import logo from '../images/logo.webp';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+
+
+
+
+
+
+
+
 
 // Definirea variabilelor pentru starea meniurilor
 let isMeniuActive = false;
@@ -216,17 +225,55 @@ const changeMccafeColorActive = () => {
 
 
   
+const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+const handleBurgerClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+
+};
+
+
+const arrSymbol = `>`;
+
+
 
 
     return (
+        <>
+
+   
+      
+
+
+
+
+
+
+
+
+       
+
+
+
         <div id="desktop-menu">
             <div id="logo">
                 <Link to='/' onClick={closeAllMenus}><img src={logo} alt="Logo" /></Link>
-                <Burger />
-            </div>
-            <div className="menu-items">
+               
+                <div className="burger-menu" onClick={handleBurgerClick}>
+                    <div className={isMenuOpen ? 'burger-line-1':'burger-line-1-toggle'}></div>
+                    <div className={isMenuOpen ? 'burger-line-2':'burger-line-2-toggle'}></div>
+                    <div className={isMenuOpen ? 'burger-line-3':'burger-line-3-toggle'}></div>
+                </div>
+
+                </div>
+
+          
+
+
+           
+            <div className={isMenuOpen?"menu-items":'menu-items-hide'}>
                 <div className='for-red-line'>
-                <div className="item-meniu" onClick={() => { meniuMove(); changeMeniuColorActive(); }}>
+                <div className="item-meniu" onClick={() => { meniuMove(); changeMeniuColorActive();}}>
                         <p className="text-menu" id={`${meniuColorActive? '' : 'active'}`}>Meniu</p>
                         <span className="arrow-menu-meniu">
                             <div className="arrow-left-meniu"></div>
@@ -235,7 +282,66 @@ const changeMccafeColorActive = () => {
                     </div>
                     <div className='red-meniu-line'></div>
                 </div>
-                <Meniu />
+
+
+
+                <div className="meniu-items-desktop-hide">
+    <div className='meniu-col-meniu-1'>
+        <Link to='./pui' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Pui</div>
+        </Link>
+        <Link to='./vita' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Vită</div>
+        </Link>
+        <Link to='./porc' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Porc</div>
+        </Link>
+        <Link to='./peste' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Pește</div>
+        </Link>
+        <Link to='./cartofi' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Cartofi</div>
+        </Link>
+        <Link to='./bauturi' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Băuturi</div>
+        </Link>
+        <Link to='./produse' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu' id='resize-text-menu'>Vezi toate produsele {arrSymbol}</div>
+        </Link>
+    </div>
+    <div className='meniu-col-2'>
+        <Link to='./deserturi' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Deserturi</div>
+        </Link>
+        <Link to='./salate' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Salate</div>
+        </Link>
+        <Link to='./micdejun' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Micul Dejun</div>
+        </Link>
+        <Link to='./gustari' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Gustări</div>
+        </Link>
+        <Link to='./happymeal' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Happy Meal®</div>
+        </Link>
+        <Link to='./meniuri' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Meniuri</div>
+        </Link>
+        <Link to='./sosuri' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>Sosuri</div>
+        </Link>
+        <Link to='./mcdelivery' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>
+            <div className='line-meniu'>McDelivery {arrSymbol}</div>
+        </Link>
+    </div>
+</div>
+
+
+
+
+
+
                 <div className='for-red-line'>
                     <div className="item-familie" onClick={() => { familieMove(); changefamilieColorActive(); }}>
                         <p className="text-menu" id={`${familieColorActive? '' : 'active'}`}>Familie</p>
@@ -246,7 +352,19 @@ const changeMccafeColorActive = () => {
                     </div>
                     <div className='red-familie-line'></div>
                 </div>
-                <Familie />
+
+
+                <div className="familie-items-desktop-hide">
+            <div className='meniu-col-1'>
+                <div className='line-meniu'><Link to='/' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>McPoza®</Link></div>
+                <div className='line-meniu'><Link to='happymealmain' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>Happy Meal®</Link></div>
+                <div className='line-meniu'><Link to='ronaldprogramm' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>Programul Ronald McDonald®</Link></div>
+            </div>
+        </div>
+
+
+
+
                 <div className='for-red-line'>
                     <div className="item-comunitate" onClick={() => { comunitateMove(); changeComunitateColorActive(); }}>
                         <p className="text-menu" id={`${comunitateColorActive? '' : 'active'}`}>Comunitate</p>
@@ -257,134 +375,40 @@ const changeMccafeColorActive = () => {
                     </div>
                     <div className='red-comunitate-line'></div>
                 </div>
-                <Comunitate />
+
+
+                <div className="comunitate-items-desktop-hide">
+            <div className='meniu-col-1'>
+                <div className='line-meniu'><Link to='mediu' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>Mediu</Link></div>
+                <div className='line-meniu'><Link to='fundatiaronald' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>Fundația Ronald McDonald®</Link></div>
+                <div className='line-meniu'><Link to='presa' onClick={ () => {closeAllMenus(); handleBurgerClick()}} className='menu-links'>Presă</Link></div>
+            </div>
+            </div>
+
+
                  <div className='item-restaurante' onClick={closeAllMenus}>
-                    <p className="text-menu" onClick={changeRestauranteColorActive}><Link to='/restaurante' className='menu-links' id={`${restauranteColorActive? '' : 'active'}`}>Restaurante</Link></p>
+                    <p className="text-menu" onClick={ () => { changeRestauranteColorActive(); handleBurgerClick() }}><Link to='/restaurante' className='menu-links' id={`${restauranteColorActive? '' : 'active'}`}>Restaurante</Link></p>
                 </div>
                 <div className='item-team' onClick={closeAllMenus}>
-                    <p className="text-menu" onClick={changeTeamColorActive}><Link to='/cariere' className='menu-links' id={`${teamColorActive? '' : 'active'}`}>Vino în echipa noastră</Link></p>
+                    <p className="text-menu" onClick={ () => {changeTeamColorActive(); handleBurgerClick()}}><Link to='/cariere' className='menu-links' id={`${teamColorActive? '' : 'active'}`}>Vino în echipa noastră</Link></p>
                 </div>
                 <div className='item-mccafe' onClick={closeAllMenus}>
-                    <p className="text-menu" onClick={changeMccafeColorActive}><Link to='/mccafe' className='menu-links' id={`${mccafeColorActive? '' : 'active'}`}>McCafé®</Link></p>
+                    <p className="text-menu" onClick={() => {changeMccafeColorActive(); handleBurgerClick()}}><Link to='/mccafe' className='menu-links' id={`${mccafeColorActive? '' : 'active'}`}>McCafé®</Link></p>
                 </div>
             </div>
         </div>
+
+
+
+        </>
     );
 };
 
-const Meniu = () => {
-    const arrSymbol = `>`;
-    return (
-        <div className="meniu-items-desktop-hide">
-    <div className='meniu-col-meniu-1'>
-        <Link to='./pui' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Pui</div>
-        </Link>
-        <Link to='./vita' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Vită</div>
-        </Link>
-        <Link to='./porc' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Porc</div>
-        </Link>
-        <Link to='./peste' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Pește</div>
-        </Link>
-        <Link to='./cartofi' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Cartofi</div>
-        </Link>
-        <Link to='./bauturi' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Băuturi</div>
-        </Link>
-        <Link to='./produse' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu' id='resize-text-menu'>Vezi toate produsele {arrSymbol}</div>
-        </Link>
-    </div>
-    <div className='meniu-col-2'>
-        <Link to='./deserturi' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Deserturi</div>
-        </Link>
-        <Link to='./salate' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Salate</div>
-        </Link>
-        <Link to='./micdejun' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Micul Dejun</div>
-        </Link>
-        <Link to='./gustari' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Gustări</div>
-        </Link>
-        <Link to='./happymeal' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Happy Meal®</div>
-        </Link>
-        <Link to='./meniuri' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Meniuri</div>
-        </Link>
-        <Link to='./sosuri' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>Sosuri</div>
-        </Link>
-        <Link to='./mcdelivery' onClick={closeAllMenus} className='menu-links'>
-            <div className='line-meniu'>McDelivery {arrSymbol}</div>
-        </Link>
-    </div>
-</div>
 
-    );
-}
 
-const Familie = () => {
-    return (
-        <div className="familie-items-desktop-hide">
-            <div className='meniu-col-1'>
-                <div className='line-meniu'><Link to='/' onClick={closeAllMenus} className='menu-links'>McPoza®</Link></div>
-                <div className='line-meniu'><Link to='happymealmain' onClick={closeAllMenus} className='menu-links'>Happy Meal®</Link></div>
-                <div className='line-meniu'><Link to='ronaldprogramm' onClick={closeAllMenus} className='menu-links'>Programul Ronald McDonald®</Link></div>
-            </div>
-        </div>
-    );
-}
 
-const Comunitate = () => {
-    return (
-        <div className="comunitate-items-desktop-hide">
-            <div className='meniu-col-1'>
-                <div className='line-meniu'><Link to='mediu' onClick={closeAllMenus} className='menu-links'>Mediu</Link></div>
-                <div className='line-meniu'><Link to='fundatiaronald' onClick={closeAllMenus} className='menu-links'>Fundația Ronald McDonald®</Link></div>
-                <div className='line-meniu'><Link to='presa' onClick={closeAllMenus} className='menu-links'>Presă</Link></div>
-            </div>
-        </div>
-    );
-}
 
-const Burger = () => {
-    useEffect(() => {
-        const burgerMenu = document.querySelector('.burger-menu');
-        const lineOne = document.querySelector('.burger-line-1');
-        const lineTwo = document.querySelector('.burger-line-2');
-        const lineThree = document.querySelector('.burger-line-3');
-        const menuItems = document.querySelector('.menu-items');
 
-        const clickBurgerMenu = () => {
-            if (lineOne) lineOne.classList.toggle('burger-line-1-toggle');
-            if (lineTwo) lineTwo.classList.toggle('burger-line-2-toggle');
-            if (lineThree) lineThree.classList.toggle('burger-line-3-toggle');
-            if (menuItems) menuItems.classList.toggle('menu-items-hide');
-        };
 
-        if (burgerMenu) {
-            burgerMenu.addEventListener('click', clickBurgerMenu);
-        }
 
-        return () => {
-            if (burgerMenu) {
-                burgerMenu.removeEventListener('click', clickBurgerMenu);
-            }
-        };
-    }, []);
 
-    return (
-        <div className="burger-menu">
-            <div className="burger-line-1"></div>
-            <div className="burger-line-2"></div>
-            <div className="burger-line-3"></div>
-        </div>
-    );
-};

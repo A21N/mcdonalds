@@ -19,7 +19,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color">Livrăm prin</h2>
                         <h1 className="home-color">McDelivery™</h1>
                         <h2 className="pos-elements home-color">Venim noi la tine!</h2>
-                        <Link to='./mcdelivery'>
+                        <Link to='./mcdelivery' className="home-decoration-none">
                         <button className="home-buttons">COMANDĂ ACUM</button>
                         </Link>
                     </div>
@@ -37,7 +37,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color">Alege o</h2>
                         <h1 className="home-color">Carieră la Mec</h1>
                         <h2 className="pos-elements home-color">Vino alături de noi!</h2>
-                        <Link to='/cariere'>
+                        <Link to='/cariere' className="home-decoration-none">
                         <button className="home-buttons">Aplică acum</button>
                         </Link>
                     </div>
@@ -45,7 +45,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color">Descoperă toate</h2>
                         <h1 className="home-color">Produsele noastre</h1>
                         <h2 className="pos-elements home-color">Produse iconice și noutăți</h2>
-                        <Link to='./produse'>
+                        <Link to='./produse' className="home-decoration-none">
                         <button className="home-buttons">Descoperă produsele</button>
                         </Link>
                     </div>
@@ -60,7 +60,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color">Bucură-te de</h2>
                         <h1 className="home-color">Gustul McCafé®</h1>
                         <h2 className="pos-elements home-color">Venim noi la tine!</h2>
-                        <Link to='./mccafe'>
+                        <Link to='./mccafe' className="home-decoration-none">
                         <button className="home-buttons">Descoperă produsele</button>
                         </Link>
                     </div>
@@ -75,7 +75,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color-small">Livrăm prin</h2>
                         <h1 className="home-color-small">McDelivery™</h1>
                         <h2 className="home-color-small">Venim noi la tine!</h2>
-                        <Link to='./mcdelivery'>
+                        <Link to='./mcdelivery' className="home-decoration-none">
                         <button className="home-buttons">COMANDĂ ACUM</button>
                         </Link>
                     </div>
@@ -95,7 +95,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color-small">Alege o</h2>
                         <h1 className="home-color-small">Carieră la Mec</h1>
                         <h2 className="home-color-small">Vino alături de noi!</h2>
-                        <Link to='/cariere'>
+                        <Link to='/cariere' className="home-decoration-none">
                         <button className="home-buttons">Aplică acum</button>
                         </Link>
                     </div>
@@ -104,7 +104,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color-small">Descoperă toate</h2>
                         <h1 className="home-color-small">Produsele noastre</h1>
                         <h2 className="home-color-small">Produse iconice și noutăți</h2>
-                        <Link to='./produse'>
+                        <Link to='./produse' className="home-decoration-none">
                         <button className="home-buttons">Descoperă produsele</button>
                         </Link>
                     </div>
@@ -121,7 +121,7 @@ export const Home = () => {
                         <h2 className="pos-elements home-color-small">Bucură-te de</h2>
                         <h1 className="home-color-small">Gustul McCafé®</h1>
                         <h2 className="home-color-small">Venim noi la tine!</h2>
-                        <Link to='./mccafe'>
+                        <Link to='./mccafe' className="home-decoration-none">
                         <button className="home-buttons">Descoperă produsele</button>
                         </Link>
                     </div>

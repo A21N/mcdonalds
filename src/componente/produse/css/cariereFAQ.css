@@ -44,6 +44,7 @@
 .faq-button {
     position: relative;
     right: 0;
+    top: 10px;
     
 }
 
@@ -98,7 +99,8 @@
 }
 
 .align-faq h3 {
-    font-size: 1.05em;
+    font-size: 0.95em;
+    width: 265px;
 }
 
 @media screen and (max-width: 1250px) {
