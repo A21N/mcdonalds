@@ -1,5 +1,10 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
 import '../css/slideshow.css';
+
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 import vacation from '../images/slideshow/vacation.jpg';
 import music from '../images/slideshow/music.jpg';
@@ -13,105 +18,133 @@ import burgersmall from '../images/slideshow/burgersmall.jpg';
 import saladsmall from '../images/slideshow/saladsmall.jpg';
 import catssmall from '../images/slideshow/catssmall.jpg';
 
-export const Slideshow = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
+//codul necesar redimensionarii imaginilor din slide
 
-    window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
-  const largeImages = [vacation, music, burger, salad, cats];
-  const smallImages = [vacationsmall, musicsmall, burgersmall, saladsmall, catssmall];
-  
-  const imageGallery = isSmallScreen ? smallImages : largeImages;
-  const totalSlides = imageGallery.length;
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const slideshowRef = useRef(null);
 
-  const changeRight = useCallback(() => {
-    setCurrentIndex(prevIndex => (prevIndex < totalSlides + 1 ? prevIndex + 1 : 1));
-  }, [totalSlides]);
-
-  const changeLeft = useCallback(() => {
-    setCurrentIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : totalSlides));
-  }, [totalSlides]);
-
-  useEffect(() => {
-    const handleTransitionEnd = () => {
-      if (currentIndex === 0) {
-        slideshowRef.current.style.transition = 'none';
-        setCurrentIndex(totalSlides);
-      } else if (currentIndex === totalSlides + 1) {
-        slideshowRef.current.style.transition = 'none';
-        setCurrentIndex(1);
-      }
-    };
-
-    const node = slideshowRef.current;
-    node.addEventListener('transitionend', handleTransitionEnd);
-
-    return () => {
-      node.removeEventListener('transitionend', handleTransitionEnd);
-    };
-  }, [currentIndex, totalSlides]);
-
-  useEffect(() => {
-    if (currentIndex === totalSlides || currentIndex === 1) {
-      setTimeout(() => {
-        if (slideshowRef.current) {
-          slideshowRef.current.style.transition = 'transform 0.5s ease-in-out';
-        }
-      }, 50);
-    }
-  }, [currentIndex, totalSlides]);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      changeRight();
-    }, 8000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [changeRight]);
-
+const CustomPrevArrow = (props) => {
+  const { className, style, onClick } = props;
   return (
-    <section id="slide-show">
-      <div className='arrow-slide-left' onClick={changeLeft}>
-        <div className='arrow-left-slide-1'></div>
-        <div className='arrow-left-slide-2'></div>
-      </div>
-
-      <div id='corp-slideshow'>
-        <div
-          className="slides-container"
-          ref={slideshowRef}
-          style={{
-            display: 'flex',
-            transform: `translateX(-${currentIndex * 100}%)`,
-            transition: 'transform 0.5s ease-in-out',
-          }}
-        >
-          <img src={imageGallery[totalSlides - 1]} alt="slideshow" className="slide" />
-          {imageGallery.map((image, index) => (
-            <img key={index} src={image} alt="slideshow" className="slide" />
-          ))}
-          <img src={imageGallery[0]} alt="slideshow" className="slide" />
-        </div>
-      </div>
-
-      <div className='arrow-slide-right' onClick={changeRight}>
-        <div className='arrow-right-slide-1'></div>
-        <div className='arrow-right-slide-2'></div>
-      </div>
-    </section>
+    <div
+      className={className}
+      style={{ 
+        ...style, 
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center", 
+        backgroundColor: "white", 
+        opacity: "0.7",
+        width: "50px",
+        height: "50px",
+        borderRadius: "50%", 
+        zIndex: 3,
+        left: "10px",  // Poziționează săgeata în stânga
+      }}
+      onClick={onClick}
+    >
+      <span style={{ 
+        border: "solid black", 
+        borderWidth: "0px 3px 3px 0px", 
+        display: "inline-block", 
+        padding: "8px", 
+        transform: "rotate(135deg)" // Schimbă rotația pentru săgeata din stânga
+      }} />
+    </div>
   );
-};
+}
+
+
+const CustomNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ 
+        ...style, 
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center", 
+        backgroundColor: "white", 
+        opacity: "0.7",
+        width: "50px",
+        height: "50px",
+        borderRadius: "50%", 
+        zIndex: 3,
+        right: "10px",  
+      }}
+      onClick={onClick}
+    >
+      <span style={{ 
+        border: "solid black", 
+        borderWidth: "0px 3px 3px 0px", 
+        display: "inline-block", 
+        padding: "8px", 
+        transform: "rotate(-45deg)" 
+      }} />
+    </div>
+  );
+}
+
+
+export const Slideshow = () => {
+
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,             
+    autoplaySpeed: 8000,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+  };
+  
+  return (
+    <>
+    <div className="slider-container">
+      <Slider {...settings} className='size-slider'>
+        <div>
+          <img src={vacation} alt="Vacation" className='size-slide'/>
+        </div>
+        <div>
+          <img src={music} alt="Music" className='size-slide' />
+        </div>
+        <div>
+          <img src={burger} alt="Burger" className='size-slide' />
+        </div>
+        <div>
+          <img src={salad} alt="Salad" className='size-slide' />
+        </div>
+        <div>
+          <img src={cats} alt="Cats" className='size-slide' />
+        </div>
+      </Slider>
+    </div>
+
+
+
+<div className="slider-container-small">
+      <Slider {...settings} className='size-slider'>
+        <div>
+          <img src={vacationsmall} alt="Vacation" className='size-slide'/>
+        </div>
+        <div>
+          <img src={musicsmall} alt="Music" className='size-slide' />
+        </div>
+        <div>
+          <img src={burgersmall} alt="Burger" className='size-slide' />
+        </div>
+        <div>
+          <img src={saladsmall} alt="Salad" className='size-slide' />
+        </div>
+        <div>
+          <img src={catssmall} alt="Cats" className='size-slide' />
+        </div>
+      </Slider>
+    </div>
+    </>
+
+  );
+}

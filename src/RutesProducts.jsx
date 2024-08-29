@@ -24,6 +24,7 @@ import { Presa } from './componente/Presa';
 import { Restaurante } from './componente/Restaurante';
 import { Cariere } from './componente/Cariere';
 import { Mccafe } from './componente/Mccafe';
+import { McApp } from './componente/McApp';
 
 
 
@@ -61,6 +62,7 @@ export const RutesProducts = () => {
                 <Route path='/restaurante' element={<Restaurante />} />
                 <Route path='/cariere' element={<Cariere />} />
                 <Route path='/mccafe' element={<Mccafe />} />
+                <Route path='/mcapp' element={<McApp />} />
             </Routes>
         
     )

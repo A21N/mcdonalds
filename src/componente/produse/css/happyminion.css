@@ -51,10 +51,57 @@ table {
 }
 
 
+
+
+
+.cats-images {
+    cursor: pointer;
+    width: 400px;
+}
+
+.cats-slider-dimension {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.distance-from-slideshow {
+    margin-top: 100px;
+
+}
+
+* {
+    outline: none !important;
+    box-shadow: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+
+/* Dimensiunea și stilul punctelor */
+.slick-dots li button:before {
+    font-size: 12px; /* Dimensiunea standard a punctelor */
+    color: gray; /* Culoarea punctelor neactive */
+  }
+  
+  /* Dimensiunea și stilul punctului activ */
+  .slick-dots li.slick-active button:before {
+    font-size: 12px; /* Dimensiunea punctului activ */
+    color: black; /* Culoarea punctului activ */
+  }
+
+
+
 @media screen and (max-width: 1200px) {
 
     .heading-minions {
         width: 90%;
+    }
+
+
+    .cats-slider-dimension {
+        width: 100%;
+        margin: 0 auto;
     }
 
 }
@@ -199,3 +246,4 @@ th {
 
     
 }
+

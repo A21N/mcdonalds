@@ -27,9 +27,9 @@ export const Home = () => {
                         <h2 className="pos-elements home-color">Instalează</h2>
                         <h1 className="home-color">Aplicația McDonald's®</h1>
                         <h2 className="pos-elements home-color">Produse pe gustul tău</h2>
-                        <a href="https://www.mcdonalds.ro/loyalty">
+                        <Link to='./mcapp' className="home-decoration-none">
                         <button className="home-buttons">Află mai multe</button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="gal-2">
@@ -84,9 +84,9 @@ export const Home = () => {
                         <h2 className="pos-elements home-color-small">Instalează</h2>
                         <h1 className="home-color-small">Aplicația McDonald's®</h1>
                         <h2 className="home-color-small">Produse pe gustul tău</h2>
-                        <a href="https://www.mcdonalds.ro/loyalty">
-                        <button className="home-buttons">Află mai multe</button>
-                        </a>
+                        <Link to='./mcapp' className="home-decoration-none">
+                            <button className="home-buttons">Află mai multe</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="gal-2-small">

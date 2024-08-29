@@ -1,8 +1,30 @@
 .container-restaurante {
     width: 100%;
-    margin: 97px auto 0 auto;
+    margin: 0px auto 0 auto;
 }
 
 .size-image-restaurante {
     width: 100%;
+   
+}
+
+
+[ alt='restaurante-1'] {
+    display: none;
+}
+
+[alt='restaurante-2'] {
+    display: flex;
+
+}
+
+@media screen and (max-width: 480px ) {
+    [ alt='restaurante-1'] {
+        display: flex;
+    }
+
+    [alt='restaurante-2'] {
+        display: none;
+    
+    }
 }
